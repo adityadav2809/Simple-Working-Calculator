@@ -1,0 +1,151 @@
+/* Global Styles */
+body {
+  background-color: #D9ED92; /* Light Green background for the body */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column; /* Stack header and calculator vertically */
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Center the content vertically */
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 40px,
+    rgba(0, 0, 0, 0.02) 40px,
+    rgba(0, 0, 0, 0.02) 80px
+  ); /* Subtle diagonal pattern for added depth */
+  background-size: 100px 100px; /* Size of each repetition of the pattern */
+  background-repeat: repeat; /* Repeating pattern */
+}
+
+/* Header Styles */
+.header {
+  text-align: center;
+  margin-bottom: 20px; /* Space between header and calculator */
+}
+
+#aditya {
+  font-size: 32px;
+  margin: 0;
+  padding: 12px;
+  font-family: 'Times New Roman', Times, serif;
+  background: linear-gradient(to right, #34A0A4, #ffffff); /* Gradient background */
+  color: #184E77;
+  border-radius: 12px;
+  box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.1); /* Inner shadow for depth */
+  width: 100%;
+  max-width: 600px; /* Max width to center it properly */
+}
+
+/* Calculator Styles */
+#myform {
+  width: 320px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+  z-index: 1; /* Ensures the calculator stays above background pattern */
+}
+
+/* Calculator Header Styles */
+h1 {
+  text-align: center;
+  font-size: 24px;
+  margin: 0;
+  padding: 12px;
+  background-color: #34A0A4; /* Blue-Teal */
+  color: #ffffff;
+  border-radius: 12px 12px 0 0;
+  box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.1); /* Inner shadow for depth */
+}
+
+/* Display Styles */
+#disp {
+  width: calc(100% - 20px); /* Make the display width fit perfectly with padding */
+  height: 50px; /* Same height as buttons */
+  font-size: 24px; /* Slightly larger font size for better readability */
+  margin: 10px 0; /* Adjusted margin for better spacing */
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #B5E48C; /* Soft Green */
+  color: #184E77; /* Deep Blue for text color */
+  text-align: right;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  outline: none; /* Removes the outline on focus */
+  transition: background-color 0.3s ease; /* Smooth transition for any state changes */
+}
+
+/* Button Styles */
+input[type="button"] {
+  width: 65px;
+  height: 50px; /* Consistent height for all buttons */
+  font-size: 18px;
+  margin: 5px;
+  padding: 5px;
+  border: none;
+  border-radius: 10px;
+  background-color: #76C893; /* Green for main buttons */
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease; /* Smooth transitions */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Button shadow */
+}
+
+input[type="button"]:hover {
+  background-color: #52B69A; /* Teal on hover */
+}
+
+input[type="button"]:active {
+  background-color: #34A0A4; /* Blue-Teal when pressed */
+  transform: translateY(2px); /* Button press effect */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Press shadow */
+}
+
+/* Operator Button Styles */
+input[value="+"]:not([type="button"]),
+input[value="-"]:not([type="button"]),
+input[value="*"]:not([type="button"]),
+input[value="/"]:not([type="button"]) {
+  background-color: #168AAD; /* Bright Blue for operators */
+}
+
+input[value="+"]:hover,
+input[value="-"]:hover,
+input[value="*"]:hover,
+input[value="/"]:hover {
+  background-color: #1A759F; /* Blue on hover for operators */
+}
+
+input[value="="] {
+  background-color: #FFD166; /* Yellow for equals button */
+  color: #333;
+}
+
+input[value="="]:hover {
+  background-color: #F7B731; /* Darker yellow on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #myform {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  #myform {
+    width: 95%;
+  }
+  input[type="button"] {
+    width: 50px;
+    height: 40px; /* Adjusted height for smaller screens */
+    font-size: 16px;
+  }
+  #disp {
+    height: 40px; /* Matching reduced height for smaller screens */
+    font-size: 20px;
+  }
+}
