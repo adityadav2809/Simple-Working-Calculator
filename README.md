@@ -22,7 +22,7 @@ This project is a basic implementation of a calculator using HTML, CSS, and Java
 
 1. Clone the repository:
     ```bash
-    (https://github.com/adityadav2809/Simple-Working-Calculator.git)
+    https://github.com/adityadav2809/Simple-Working-Calculator.git
     ```
 
 2. Open the `index.html` file in a web browser.
